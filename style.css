@@ -1,0 +1,504 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap");
+
+:root {
+    --white1: #F4F5F7;
+    --white2: #F4F5F6;
+    --white3: rgba(255,255,255,.9);
+    --gray1: #d9d9d9;
+    --gray2: rgba(255, 255, 255, .55);
+    --gray3: #807f84;
+    --gray4: #666;
+    --gray5: #e0e0e0;
+    --gray6: #d6d6d6;
+    --gray7: #C2D4D7;
+    --gray8: #DBDCDD;
+    --yellow1: #ffe400;
+    --blue1: #1da1f2;
+    --blue2: #0077b5;
+    --blue3: #405de6;
+    --blue4: #3b5998;
+    --red1: #F72210;
+    --red2: #f72310;
+    --red3: #F62210;
+    --black1: #000;
+    --black2: rgba(0, 0, 0, .55);
+    --black3: #333;
+    --black4: rgba(3, 3, 3, .4);
+    --black5: #555;
+    --black6: rgba(3, 3, 3, .5);
+}
+
+body {
+  font-family: "Roboto Condensed", sans-serif;
+  color: var(--black3);
+  background-color: var(--white1);
+  overflow-x: hidden;
+}
+
+/* WRAPPER */
+.wrapper {
+  max-width: 1310px;
+  margin: 0 auto;
+  background-color: white;
+}
+
+/* HEADER */
+.header a:focus,
+.header button:focus {
+  outline: none;
+}
+
+.header-main {
+  height: 50px;
+  padding: 0 0 0 15px;
+  background-color: var(--red1);
+}
+
+.header-main-buttons-account,
+.header-main-buttons-subscribe {
+  display: none;
+}
+
+.header-main-buttons-account {
+  fill: var(--bs-white);
+  opacity: 0.75;
+}
+
+.header-main-buttons-account:hover {
+  cursor: pointer;
+}
+
+.main-buttons-menu {
+  width: 30px;
+  height: 50px;
+  padding: 0 25px;
+}
+
+.main-buttons-menu div {
+  width: 18px;
+  height: 2px;
+  margin: 1.5px 0;
+  background-color: var(--gray2);
+}
+
+@media screen and (min-width: 375px) {
+  .header-main-buttons-account {
+    display: block;
+    margin-right: 10px;
+  }
+
+  .header-main-buttons-login,
+  .header-main-buttons-subscribe {
+    padding: 4.5px 12px;
+    border: none;
+    border-radius: 24px;
+    font: bold 13px "Roboto Condensed", sans-serif;
+    text-transform: uppercase;
+  }
+
+  .header-main-buttons-subscribe {
+    background-color: var(--yellow1);
+    color: var(--black1);
+    display: flex;
+    align-items: center;
+  }
+  .header-main-buttons-subscribe::after {
+    margin-left: 5px;
+    content: "";
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    transform: rotate(45deg);
+    border-top-width: 2px;
+    border-top-style: solid;
+    border-right-width: 2px;
+    border-right-style: solid;
+  }
+
+  .main-buttons-menu {
+    padding: 0 25px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .header-main-buttons-login,
+  .header-main-buttons-subscribe {
+    padding: 4.5px 15px;
+    font-size: 18px;
+  }
+
+  .header-main-buttons-login {
+    background-color: var(--red2);
+    color: var(--bs-white);
+    margin-right: 12px;
+  }
+
+  .header-main-buttons-subscribe::after {
+    width: 8px;
+    height: 8px;
+  }
+
+  .main-buttons-menu {
+    width: 30px;
+    height: 50px;
+    padding: 0 35px 0 30px;
+  }
+  .main-buttons-menu div {
+    width: 30px;
+    height: 4px;
+    margin: 2px 0;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .header-main {
+    height: 108px;
+    padding: 20px 25px 32px 30px;
+  }
+  .header-main-text {
+    color: var(--bs-white);
+    font: 16px "Roboto Condensed", sans-serif;
+    margin-bottom: 3px;
+  }
+
+  .header-main-logo {
+    position: relative;
+    top: 4px;
+    margin-left: 100px;
+  }
+  .header-main-logo a svg {
+    width: 396px;
+    height: 60px;
+  }
+
+  .header-nav {
+    height: 85px;
+  }
+  .header-nav a:hover {
+    color: var(--red1);
+  }
+
+  .header-nav-boxList1 {
+    background-color: var(--bs-white);
+    position: relative;
+    bottom: 13px;
+    padding-right: 82px;
+    height: 52px;
+  }
+  .header-nav-boxList1::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    content: "";
+    display: block;
+    width: 78px;
+    background-color: var(--red1);
+    border-left: 12px solid var(--bs-white);
+    border-top: 13px solid var(--red1);
+  }
+
+  .nav-boxList1-list1 {
+    height: 100%;
+    width: 100%;
+  }
+  .nav-boxList1-list1 li {
+    font: bold 18px "Roboto Condensed", sans-serif;
+    border-right: 1px solid var(--gray1);
+  }
+  .nav-boxList1-list1 li a {
+    color: var(--black1);
+  }
+
+  .nav-boxList1-list2 {
+    height: 100%;
+    width: 86px;
+  }
+  .nav-boxList1-list2 li {
+    color: var(--black2);
+  }
+
+  .header-nav-boxList2 {
+    background-color: var(--bs-white);
+    border-top: 2px solid var(--white1);
+    border-bottom: 2px solid var(--white1);
+    overflow: hidden;
+    position: relative;
+    bottom: 13px;
+    height: 46px;
+  }
+  .nav-boxList2-list {
+    height: 100%;
+  }
+  .nav-boxList2-list li {
+    font: bold 15px "Roboto Condensed", sans-serif;
+    margin-left: 30px;
+  }
+  .nav-boxList2-list a {
+    color: var(--gray3);
+  }
+}
+
+
+
+
+
+a {
+  font-family: 'Roboto Condensed', sans-serif;
+  color: #000;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  line-height: 20px;
+  font-weight: normal;
+}
+
+.image-size img {
+  object-fit: cover;
+  object-position: top center;
+  min-height: 293px;
+  max-height: 450px;
+}
+
+.underline-red:hover {
+  color: #000;
+  text-decoration: underline;
+  text-decoration-color: #f92859;
+}
+
+.color-red:hover {
+  color: #f92859;
+  text-decoration: none;
+}
+
+.debate-border {
+  border-top: 5px solid #ccc;
+  border-bottom: 5px solid #ccc;
+}
+
+/* MY TURN SECTION */
+.my-turn img {
+  max-width: 215px;
+  min-height: 40%;
+  width: 100%;
+  /* object-fit: cover; */
+  /* object-position: center center; */
+}
+
+
+/* MORE STORIES SECTION */
+.stories-section img {
+  height: 95px;
+  width: 95px;
+  object-fit: cover;
+  object-position: center center;
+}
+
+/* THE DEBATE AND OPINION SECTION */
+.autorname,
+span {
+  font-size: 0.8em;
+}
+
+.versus {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #000;
+  color: aliceblue;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+}
+
+.border-versus {
+  height: 1px;
+  border-top: 3px double #d9d9d9;
+}
+
+.subscribe-container {
+  max-width: 300px;
+  background-color: #f4f5f6;
+  border: 1px solid #dbdde0;
+  margin: auto;
+}
+
+/* Main */
+main {
+  background-color: #f1f1f1;
+}
+
+.principal-news {
+  max-width: 1310px;
+  height: auto;
+  background-color: white;
+}
+
+.compact-column img {
+  width: 100px;
+  margin-right: 10px;
+  object-fit: cover;
+  font-size: 17px !important;
+}
+
+.see-features {
+  background-color: rgb(238, 238, 238);
+  padding: 4px;
+}
+
+.see-features a {
+  text-decoration: none;
+  color: #000;
+}
+
+.icon-color {
+  fill: #666;
+}
+
+.icon-color:hover {
+  fill: blue;
+}
+
+.search-logo {
+  background: url(https://g.newsweek.com/www/images/icon-search-glass.svg) center/contain no-repeat white;
+  background-position: right center;
+  width: 100px;
+}
+
+.subscribe-section {
+  background-color: #f4f5f6;
+}
+
+.subscribe-images {
+  position: relative;
+  z-index: 1;
+  min-width: 280px;
+  height: 241px;
+  margin: auto;
+}
+
+.subscribe-images img {
+  width: 170px;
+  height: 227px;
+}
+
+.text-red {
+  color:rgb(247, 34, 16);
+}
+
+.bg-red {
+  background-color: rgb(247, 34, 16);
+}
+
+.cover1 {
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  top: 0;
+}
+
+.cover2 {
+  position: absolute;
+  z-index: 3;
+  left: 80px;
+  top: 10px;
+}
+
+.phone-newsweek {
+  background: url("https://d.newsweek.com/en/full/1541302/starting5-homepage.png?w=397&h=265&q=90&f=742bce9a6f72dd8f19ba2e7fd5db06e5") center center / cover no-repeat;
+}
+
+.subscribe-text {
+  min-width: 250px;
+  width: 30vw;
+  max-width: 480px;
+  margin: auto;
+}
+
+/* footer */
+
+.footer {
+  max-width: 1310px;
+  margin: auto;
+  background-color: white;
+}
+
+/* Text styles */
+
+.sizelink-14 a {
+  font-size: 14px;
+}
+
+.sizelink-16 a {
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.sizetext-15 p {
+  font-size: 15px;
+}
+
+.sizetext-12 p {
+  font-size: 12px;
+}
+
+.sizelink-17 a {
+  font-size: 17px;
+}
+
+.sizelink-18 a {
+  font-size: 18px;
+}
+
+.sizelink-22 a {
+  font-size: 22px;
+}
+
+.sizelink-19 a {
+  font-size: 19px;
+}
+
+.sizelink-24 a {
+  font-size: 24px;
+}
+
+.gray {
+  color: rgb(3, 3, 3, 0.5);
+}
+
+.decoration-none a:hover {
+  text-decoration: none;
+  color: rgb(3, 3, 3, 0.5);
+}
+
+.mediumgray {
+  color: #666;
+}
+
+.arial {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #666;
+}
+
+.arial:hover {
+  text-decoration: none;
+  color: #363535;
+}
+
+@media (max-width: 1300px) {
+  .image-size img {
+    min-height: 10px;
+  }
+}
+
+.more-stories img {
+  max-width: 100px;
+  max-height: 100px;
+  object-position: top center;
+  object-fit: cover;
+}
